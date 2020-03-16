@@ -17,6 +17,8 @@
         </tr >
       </thead>
       <tbody>
+        <!-- I'm sure there's a way to do the v-binding from computed or a method but
+        I was running into bugs and just decided to leave it like this for now -->
         <tr class="md-table-row" 
           v-for="(element, index) in rowData" :key="index"
           v-bind:class="{
@@ -37,9 +39,6 @@
 <script>
   export default {
     name: 'TableCard',
-    // props: {
-    //   activeHighlight: Boolean
-    // },
     props: {
       'status':String,
     },
